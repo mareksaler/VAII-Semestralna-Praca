@@ -38,8 +38,14 @@ class FinnishedHikeController extends Controller
     public function store(Request $request, Hike $hike)
     {
         // dd($request);
+        
         $user_id = Auth::user()->id;
         $hike_id = $hike->id;
+        // dd(FinnishedHike::where('hike_id', '=', $hike->id)->where('user_id', '=', $user_id)->exists());
+        
+        if (FinnishedHike::where('hike_id', '=', $hike->id)->where('user_id', '=', $user_id)->exists()) {
+            return redirect()->back()->with('status-warning', 'Prispevok uz mate pridany do splnenych tur.'); 
+        }
 
         $finnishedHike = new FinnishedHike();
         $finnishedHike->user_id = $user_id;

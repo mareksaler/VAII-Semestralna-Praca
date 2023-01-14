@@ -2,7 +2,7 @@
 
 @section('main')
 <div class="container-lg bleda mt-3 pt-3 pb-3">
-    <div class="row">
+    <div class="d-flex justify-content-center flex-wrap ">
         @include('includes.flash-message')
     </div>
     <div class="row">
@@ -29,7 +29,7 @@
 
     <div class="row">
         <p class="m-2">
-            {{ $hike->text }}
+            {!! $hike->text !!}
         </p>
     </div>
 

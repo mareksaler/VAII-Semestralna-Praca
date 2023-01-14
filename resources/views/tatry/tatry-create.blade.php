@@ -78,12 +78,11 @@
             @enderror
         </div>
 
-
         {{-- Obsah --}}
         <div class="row pb-2  justify-content-center">
             <div class="col-md-6">
                 <label for="body" class="form-label">Obsah</label>
-                <textarea class="form-control" placeholder="Obsah..." id="body" name="body" required minlength="5"></textarea>
+                <textarea class="form-control" placeholder="Obsah..." id="body" name="body" minlength="5"></textarea>
             </div>
             @error('body')
             <p style="color: red; margin-bottom: 25px;">{{ $message }}</p>
@@ -105,7 +104,7 @@
 
 @section('script')
 <script type="text/javascript" src="{{ URL::asset('js/javascript.js') }}"></script>
-{{-- <script>
+<script>
     ClassicEditor
         .create(document.querySelector('#body'))
         .then(editor => {
@@ -115,5 +114,5 @@
             console.error(error);
         });
 
-</script> --}}
+</script>
 @endsection

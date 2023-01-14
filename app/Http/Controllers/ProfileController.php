@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\FinnishedHike;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -20,9 +21,11 @@ class ProfileController extends Controller
     
     public function index() {
          // $finnishedHikes = FinnishedHike::where('user_id', '=', Auth::user()->id)->get();
-         $hikes = FinnishedHike::join('hikes', function($join) {
-            $join->on('hikes.id', '=', 'finnished_hikes.hike_id')->where('hikes.user_id', '=', 1);
+        //  dd(Auth::user()->id);
+        $hikes = FinnishedHike::join('hikes', function($join) {
+            $join->on('hikes.id', '=', 'finnished_hikes.hike_id')->where('finnished_hikes.user_id', '=', Auth::user()->id);
         })->get();
+        
         
         // dd($hikes);
 
