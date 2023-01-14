@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Hike;
 use App\Models\Category;
+use App\Models\FinnishedHike;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -98,7 +99,12 @@ class HikeController extends Controller
      */
     public function show(Hike $hike)
     {
-        return view('tatry.tatry-post', compact('hike'));
+        $finnished = false;
+        if (FinnishedHike::where('hike_id', '=', $hike->id)->where('user_id', '=', Auth::user()->id)->exists()) {
+            $finnished = true;
+        }
+
+        return view('tatry.tatry-post', compact('hike', 'finnished'));
     }
 
     /**

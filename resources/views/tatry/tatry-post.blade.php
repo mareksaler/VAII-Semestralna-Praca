@@ -16,11 +16,13 @@
         </div>
         <div class="col">
             @auth
+            @if (!$finnished)
             <form action="{{ route('finnished-hikes.store', $hike) }}" method="post">
                 @method('get')
                 @csrf
                 <button type="submit" class="btn btn-success">Splnené</button>
             </form>
+            @endif
             @endauth
             <div class="fs-4">Dĺžka túry: {{ $hike->distance }} km</div>
             <div class="fs-4">Čas túry: {{ $hike->time }} hod</div>
