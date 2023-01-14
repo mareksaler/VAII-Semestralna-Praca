@@ -62,21 +62,21 @@
     <!-- TLACIDLA -->
     <div class="row mt-4">
         <div class="col-lg-4 uvod-tlacidla">
-            <a href=""><img class="centrovanie" src="{{ asset('img/vysoke_tatry.png') }}" height="250" width="300" alt="Vysoke Tatry" />
+            <a href="{{ route('hikes.index', ['category_id'=>1]) }}"><img class="centrovanie" src="{{ asset('img/vysoke_tatry.png') }}" height="250" width="300" alt="Vysoke Tatry" />
                 <div class="nadpis">
                     <h1>Vysoké Tatry</h1>
                 </div>
             </a>
         </div>
         <div class="col-lg-4 uvod-tlacidla">
-            <a href=""><img class="centrovanie" src="{{ asset('img/zapadne_tatry.png') }}" height="250" width="300" alt="Zapadne Tatry" />
+            <a href="{{ route('hikes.index', ['category_id'=>3]) }}"><img class="centrovanie" src="{{ asset('img/zapadne_tatry.png') }}" height="250" width="300" alt="Zapadne Tatry" />
                 <div class="nadpis">
                     <h1>Západné Tatry</h1>
                 </div>
             </a>
         </div>
         <div class="col-lg-4 uvod-tlacidla">
-            <a href=""><img class="centrovanie" src="{{ asset('img/nizke_tatry.jpg') }}" height="250" width="300" alt="Nizke Tatry" />
+            <a href="{{ route('hikes.index', ['category_id'=>2]) }}"><img class="centrovanie" src="{{ asset('img/nizke_tatry.jpg') }}" height="250" width="300" alt="Nizke Tatry" />
                 <div class="nadpis">
                     <h1>Nízke Tatry</h1>
                 </div>

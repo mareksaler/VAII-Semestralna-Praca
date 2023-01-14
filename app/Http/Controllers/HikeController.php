@@ -153,7 +153,7 @@ class HikeController extends Controller
         $text = $request->input('body');
 
         if ($request->input('image') !== null) {
-            $newImageName = uniqid() . '-' . '.' . $request->image->extension();
+            $newImageName = uniqid() . '-' . '-' . $request->image->extension();
             $request->image->move(public_path('img/hikes'), $newImageName);
             $hike->imagePath = $newImageName;
         }
