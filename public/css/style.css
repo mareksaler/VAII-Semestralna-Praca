@@ -1,0 +1,118 @@
+html {
+    position: relative;
+    min-height: 100%;
+    background-color: black;
+}
+
+body {
+    background-image: url("../img/pozadie.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Segoe UI", serif, Arial;
+    padding-bottom: 200px;
+}
+
+.tatry-obrazok {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.karta {
+    width: 200px;
+}
+
+.centrovanie {
+    margin: auto;
+    display: block;
+}
+
+.uvod-tlacidla {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: transform .2s;
+}
+
+.uvod-tlacidla:hover {
+    transform: scale(1.1);
+}
+
+.nadpis {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(40, 42, 53, 0.5);
+    text-align: center;
+}
+
+.citat {
+    margin-top: 15px;
+    font-size: 40px;
+    font-style: italic;
+    color: white;
+    text-shadow: 2px 2px 4px #a5a5a5;
+}
+
+.vpravo {
+    text-align: right;
+}
+
+.tmava {
+    background-color: #212121;
+}
+
+.bleda {
+    background-color: #a5a5a5;
+}
+
+hr.solid {
+    border-top: 3px solid black;
+}
+
+.odkaz {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.odkaz:hover {
+    color: #1c9cff;
+}
+
+.nav-item {
+    color: white;
+    transition: background-color 0.4s;
+    text-align: center;
+}
+
+.biela {
+    color: white;
+}
+
+.nav-link:visited {
+    color: white;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.nav-item:hover {
+    background-color: #1c9cff;
+    color: black;
+}
+
+.zarovanaj-na-sted {
+    text-align: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+}
