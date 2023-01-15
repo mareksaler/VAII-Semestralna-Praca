@@ -16,12 +16,12 @@
             <div class="row">
                 @auth
                 @if (auth()->user()->id === $hike->user_id)
-                <div class="col-2">
+                <div class="col-sm-2">
                     <a role="button" class="btn btn-primary" href="{{ route('hikes.edit', $hike) }}">
                         Upraviť
                     </a>
                 </div>
-                <div class="col-2">
+                <div class="col-sm-2">
                     <form method="POST" action="{{ route('hikes.destroy', $hike) }}">
                         @csrf
                         @method('delete')
@@ -30,7 +30,7 @@
                 </div>
                 @endif
                 @if (!$finnished)
-                <div class="col-2">
+                <div class="col-sm-2">
                     <form action="{{ route('finnished-hikes.store', $hike) }}" method="post">
                         @method('get')
                         @csrf

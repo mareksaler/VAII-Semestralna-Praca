@@ -1,5 +1,5 @@
 <div class="row farba-text p-2">
-    <div class="d-flex justify-content-start flex-wrap ">
+    <div class="d-flex justify-content-center flex-wrap ">
         @foreach ($hikes as $hike)
         <a href="{{ route('hikes.show', $hike) }}">
             <div class="card karta m-1">

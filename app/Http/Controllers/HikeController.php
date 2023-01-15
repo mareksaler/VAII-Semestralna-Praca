@@ -117,8 +117,10 @@ class HikeController extends Controller
     public function show(Hike $hike)
     {
         $finnished = false;
-        if (FinnishedHike::where('hike_id', '=', $hike->id)->where('user_id', '=', Auth::user()->id)->exists()) {
-            $finnished = true;
+        if (Auth::user()) {
+            if (FinnishedHike::where('hike_id', '=', $hike->id)->where('user_id', '=', Auth::user()->id)->exists()) {
+                $finnished = true;
+            }
         }
 
         return view('tatry.tatry-post', compact('hike', 'finnished'));
