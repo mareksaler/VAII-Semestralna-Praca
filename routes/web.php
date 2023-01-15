@@ -22,6 +22,7 @@ Route::get('/', function () {
 
 Route::resource('/hikes', HikeController::class);
 Route::get('/hikes/{category_id}', [HikeController::class, 'index']);
+Route::get('/hikes/{category_name}', [HikeController::class, 'index']);
 Route::get('/hikes/{hike:slug}', [HikeController::class, 'show'])->name('hikes.show');
 // Route::get('/hikes', [HikeControlle::class, 'index'])->name('hikes.index');
 // Route::get('/hikes/create', [HikeControlle::class, 'create'])->name('hikes.create');

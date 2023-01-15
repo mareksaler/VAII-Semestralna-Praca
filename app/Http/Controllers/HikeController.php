@@ -25,10 +25,27 @@ class HikeController extends Controller
     {
         // dd($request);
         // $category = Category::where('name', 'like', $request->category_id)->first()->id;
+        if ($request->category_name === 'all') {
+            $hikes = Hike::all();
+            $categories = Category::all();
+            $name = 'hikes';
+            return view('tatry.'.$name, compact('hikes', 'categories'));
+        } 
+
+        if ($request->category_name !== null) {
+            $category = Category::where('name', '=', $request->category_name)->first();
+            // dd($category->id);
+            $hikes = Hike::where('category_id', 'like', $category->id)->get();
+            $categories = Category::all();
+            return view('tatry.hikes', compact('hikes', 'categories'));
+        }
+
         $hikes = Hike::where('category_id', 'like', $request->category_id)->get();
         $name = Str::slug(Category::where('id', $request->category_id)->first()->name, '-');
-        // dd($name);
         return view('tatry.'.$name, compact('hikes'));
+        
+        
+        // dd($name);
     }
 
     /**

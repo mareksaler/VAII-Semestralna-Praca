@@ -18,6 +18,9 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="{{ route('hikes.index', ['category_id'=>3]) }}">Západné Tatry</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ route('hikes.index', ['category_name'=>'all']) }}">Všetky</a>
+                </li>
             </ul>
             <ul class="navbar-nav">
                 <!-- Authentication Links -->
@@ -35,25 +38,8 @@
                 </li>
                 @endif
                 @else
-                <!-- <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle  active" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
-                    </a>
-
-                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                            {{ __('Odhlásiť') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
-                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{ route('profile') }}">Profil</a>
+                    <a class="nav-link active" href="{{ route('profile') }}">{{ Auth::user()->name }}</a>
                 </li>
                 <li class="nav-item">
 
