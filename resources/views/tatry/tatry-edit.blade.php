@@ -23,7 +23,7 @@
         <div class="row pb-2  justify-content-center">
             <div class="col-md-6">
                 <label for="nazov" class="form-label">Názov</label>
-                <input type="text" class="form-control" value="{{ $hike->title }}" id="nazov" placeholder="Nazov" name="title" required minlength="3" maxlength="100">
+                <input type="text" class="form-control" value="{{ $hike->title }}" id="nazov" placeholder="Nazov" name="title" minlength="3" maxlength="100">
             </div>
             @error('title')
             <p style="color: red; margin-bottom: 25px;">{{ $message }}</p>

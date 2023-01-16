@@ -29,7 +29,7 @@
                     </form>
                 </div>
                 @endif
-                @if (!$finnished)
+                {{-- @if (!$finnished) --}}
                 <div class="col-sm-2">
                     <form action="{{ route('finnished-hikes.store', $hike) }}" method="post">
                         @method('get')
@@ -37,7 +37,7 @@
                         <button type="submit" class="btn btn-success">Splnené</button>
                     </form>
                 </div>
-                @endif
+                {{-- @endif --}}
                 @endauth
             </div>
             <div class="fs-4">Dĺžka túry: {{ $hike->distance }} km</div>

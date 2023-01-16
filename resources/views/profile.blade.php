@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('title')
+<title>Profil</title>
+@endsection
+
 @section('main')
 <div class="container">
 

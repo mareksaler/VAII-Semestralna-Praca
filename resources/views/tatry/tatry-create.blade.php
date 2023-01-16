@@ -22,18 +22,22 @@
         <div class="row pb-2  justify-content-center">
             <div class="col-md-6">
                 <label for="nazov" class="form-label">Názov</label>
-                <input type="text" class="form-control" id="nazov" placeholder="Nazov" name="title" required minlength="3" maxlength="100">
+                <input type="text" class="form-control" id="nazov" placeholder="Nazov" name="title" minlength="3" maxlength="100">
             </div>
-            @error('title')
-            <p style="color: red; margin-bottom: 25px;">{{ $message }}</p>
-            @enderror
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                @error('title')
+                <p style="color: red; margin-bottom: 25px;">{{ $message }}</p>
+                @enderror
+            </div>
         </div>
 
         {{-- Obrazok --}}
         <div class="row pb-2 justify-content-center">
             <div class="col-md-6">
                 <label for="formFile" class="form-label">Obrazok</label>
-                <input class="form-control" type="file" id="formFile" name="image" required>
+                <input class="form-control" type="file" id="formFile" name="image">
             </div>
             @error('image')
             <p style="color: red; margin-bottom: 25px;">{{ $message }}</p>
@@ -66,7 +70,7 @@
         <div class="row pb-2 justify-content-center">
             <div class="col-md-6">
                 <label for="area" class="form-label">Kategória:</label>
-                <select class="form-select" aria-label="Default select example" name="area" id="area" required>
+                <select class="form-select" aria-label="Default select example" name="area" id="area">
                     <option selected disabled>Vyber kategóriu</option>
                     @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -104,7 +108,7 @@
 
 @section('script')
 <script type="text/javascript" src="{{ URL::asset('js/javascript.js') }}"></script>
-<script>
+{{-- <script>
     ClassicEditor
         .create(document.querySelector('#body'))
         .then(editor => {
@@ -114,5 +118,5 @@
             console.error(error);
         });
 
-</script>
+</script> --}}
 @endsection
