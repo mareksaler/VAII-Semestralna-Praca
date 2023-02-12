@@ -6,6 +6,7 @@ html {
 
 body {
     background-image: url("../img/pozadie.jpg");
+    min-height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

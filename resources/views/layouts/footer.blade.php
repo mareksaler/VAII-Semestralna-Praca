@@ -15,17 +15,20 @@
                             <!--Grid column-->
                             <div class="col d-flex justify-content-center">
                                 <ul class="list-unstyled mb-0">
-                                    <li>
-                                        <a href="/" class="odkaz">Domov</a>
+                                    <li class="">
+                                        <a class="odkaz" href="/">Domov</a>
                                     </li>
-                                    <li>
-                                        <a href="/vysokeTatry" class="odkaz">Vysoké Tatry</a>
+                                    <li class="">
+                                        <a class="odkaz" href="{{ route('hikes.index', ['category_id'=>1]) }}">Vysoké Tatry</a>
                                     </li>
-                                    <li>
-                                        <a href="/nizkeTatry" class="odkaz">Nízke Tatry</a>
+                                    <li class="">
+                                        <a class="odkaz" href="{{ route('hikes.index', ['category_id'=>2]) }}">Nízke Tatry</a>
                                     </li>
-                                    <li>
-                                        <a href="/zapadneTatry" class="odkaz">Západné Tatry</a>
+                                    <li class="">
+                                        <a class="odkaz" href="{{ route('hikes.index', ['category_id'=>3]) }}">Západné Tatry</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="odkaz" href="{{ route('hikes.index', ['category_name'=>'all']) }}">Všetky</a>
                                     </li>
                                     <!-- <li>
                                         <a href="#" class="odkaz">Akcie 2022</a>
