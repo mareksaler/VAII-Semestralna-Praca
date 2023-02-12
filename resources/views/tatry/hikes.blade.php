@@ -9,12 +9,16 @@
     </div>
 
     <div class="row">
-        <ul class="btn-group" role="group">
+        <div class="btn-group" role="group">
             @foreach ($categories as $category)
-            <li class="category btn btn-primary"><a class="category" href="{{ route('hikes.index', ['category_name' => $category->name]) }}">{{ $category->name }}</a></li>
+            <a class="category btn btn-primary" href="{{ route('hikes.index', ['category_name' => $category->name]) }}">
+                <li class="category">{{ $category->name }}</li>
+            </a>
             @endforeach
-            <li class="category btn btn-primary"><a class="category" href="{{ route('hikes.index', ['category_name' => 'all']) }}">Všetky</a></li>
-        </ul>
+            <a class="category btn btn-primary" href="{{ route('hikes.index', ['category_name' => 'all']) }}">
+                <li class="category">Všetky</li>
+            </a>
+        </div>
     </div>
 
     @if (Auth::check())

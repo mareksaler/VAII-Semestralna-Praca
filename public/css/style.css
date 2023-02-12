@@ -22,6 +22,11 @@ body {
 
 .karta {
     width: 200px;
+    transition: transform .2s;
+}
+
+.karta:hover {
+    transform: scale(1.05);
 }
 
 .centrovanie {
@@ -66,8 +71,13 @@ body {
     background-color: #212121;
 }
 
+.modra {
+    color: #1c9cff;
+}
+
 .bleda {
-    background-color: #a5a5a5;
+    background-color: #212121;
+    color: white;
 }
 
 hr.solid {
@@ -121,8 +131,21 @@ hr.solid {
 .category {
     text-decoration: none;
     color: white;
+    list-style: none;
 }
 
 .category:visited {
     color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .btn-group {
+        display: block;
+    }
+
+    .btn-group .btn {
+        display: block;
+        float: none;
+        width: 100%;
+    }
 }

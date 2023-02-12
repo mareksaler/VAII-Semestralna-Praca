@@ -13,15 +13,15 @@
     <div class="row">
 
         <div class="col-md-6">
-            <div class="row">
+            <div class="row pb-2">
                 @auth
                 @if (auth()->user()->id === $hike->user_id)
-                <div class="col-sm-2">
+                <div class="col">
                     <a role="button" class="btn btn-primary" href="{{ route('hikes.edit', $hike) }}">
                         Upraviť
                     </a>
                 </div>
-                <div class="col-sm-2">
+                <div class="col">
                     <form method="POST" action="{{ route('hikes.destroy', $hike) }}">
                         @csrf
                         @method('delete')
@@ -30,7 +30,7 @@
                 </div>
                 @endif
                 {{-- @if (!$finnished) --}}
-                <div class="col-sm-2">
+                <div class="col">
                     <form action="{{ route('finnished-hikes.store', $hike) }}" method="post">
                         @method('get')
                         @csrf
@@ -40,8 +40,8 @@
                 {{-- @endif --}}
                 @endauth
             </div>
-            <div class="fs-4">Dĺžka túry: {{ $hike->distance }} km</div>
-            <div class="fs-4">Čas túry: {{ $hike->time }} hod</div>
+            <div class="fs-4"><b class="modra">Dĺžka túry:</b> {{ $hike->distance }} km</div>
+            <div class="fs-4"><b class="modra">Čas túry:</b> {{ $hike->time }} hod</div>
             <p class="m-2">
                 {!! $hike->text !!}
             </p>

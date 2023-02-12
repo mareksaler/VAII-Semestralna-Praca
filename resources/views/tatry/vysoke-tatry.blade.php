@@ -2,15 +2,15 @@
 
 
 @section('main')
-<div class="container-lg bleda mt-3 pt-3">
+<div class="container-lg bleda mt-3 pt-3 rounded">
 
     <div class="row">
         @include('includes.flash-message')
     </div>
 
-    <div class="row">
+    <div class="row pb-4">
         <div class="col-12">
-            <img class="img-fluid mx-auto d-block" src="{{ asset('img/vysoke_tatry/Vysoké_Tatry_panorama1.jpg') }}" height="560" width="1300" alt="Vysoke Tatry panorama" />
+            <img class="img-fluid mx-auto d-block rounded" src="{{ asset('img/vysoke_tatry/Vysoké_Tatry_panorama1.jpg') }}" height="560" width="1300" alt="Vysoke Tatry panorama" />
         </div>
     </div>
     <div class="row">
